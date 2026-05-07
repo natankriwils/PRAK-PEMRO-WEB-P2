@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Pendaftaran Kursus</title>
+  <style>
+    body {
+      background: white;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .card {
+      background: #797983;
+      width: 520px;
+      border: 2px solid #858585;
+    }
+
+    .header {
+      background: #73b8d1;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24pt;
+      color: #bb2c1c;
+    }
+
+    .section {
+      padding: 14px 24px;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+    .body {
+      padding: 0px 24px 20px;
+    }
+
+    .row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .label {
+      width: 155px;
+      font-size: 12pt;
+      padding-top: 6px;
+    }
+
+    .control {
+      flex: 1;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      border: 1px solid #8f9194;
+      padding: 5px 8px;
+      font-size: 12pt;
+      background: #f5f8fb;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+    }
+
+    .radio-list,
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .radio-list label,
+    .check-list label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12pt;
+    }
+
+    .comment {
+      background: #f4a89a;
+      padding: 10px 24px 16px;
+    }
+
+    .comment p {
+      font-size: 12pt;
+      margin-bottom: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      background: #fff;
+      resize: vertical;
+    }
+
+    .comment .buttons {
+      display: flex;
+      gap: 8px;
+      padding-top: 10px;
+    }
+
+    .comment .btn {
+      padding: 8px 20px;
+      font-size: 12pt;
+      border: 1px solid #000;
+      background: #e8edf2;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .comment .btn:hover {
+      background: #1a2a4a;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <h1>Pendaftaran Kursus</h1>
+  </div>
+
+  <form action="#" method="post">
+
+    <div class="section">Data Diri</div>
+
+    <div class="body">
+
+      <div class="row">
+        <span class="label">Nama</span>
+        <div class="control"><input type="text" name="nama"></div>
+      </div>
+
+      <div class="row">
+        <span class="label">NIM</span>
+        <div class="control"><input type="text" name="nim"></div>
+      </div>
+
+      <div class="row">
+        <span class="label">E-mail</span>
+        <div class="control"><input type="email" name="email"></div>
+      </div>
+
+      <div class="row">
+        <span class="label">Tanggal Lahir</span>
+        <div class="control"><input type="date" name="tanggal_lahir"></div>
+      </div>
+
+      <div class="row">
+        <span class="label">Jenis Kelamin</span>
+        <div class="control radio-list">
+          <label><input type="radio" name="jenis_kelamin" value="L"> Laki-laki</label>
+          <label><input type="radio" name="jenis_kelamin" value="P"> Perempuan</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="label">Pilih Program Kursus</span>
+        <div class="control check-list">
+          <label><input type="checkbox" name="kursus[]" value="csharp"> C#</label>
+          <label><input type="checkbox" name="kursus[]" value="java"> Java</label>
+          <label><input type="checkbox" name="kursus[]" value="sql"> SQL</label>
+          <label><input type="checkbox" name="kursus[]" value="html_php"> HTML dan PHP</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="label">Pilihan Hari/Jam Kursus</span>
+        <div class="control">
+          <select name="hari_jam">
+            <option value="senin_rabu">Senin - Rabu / 09.00 - 11.00</option>
+            <option value="selasa_kamis">Selasa - Kamis / 13.00 - 15.00</option>
+            <option value="jumat_sabtu">Jumat - Sabtu / 09.00 - 11.00</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="comment">
+      <p>Komentar Anda</p>
+      <textarea name="komentar" rows="4"></textarea>
+      <div class="buttons">
+        <input type="reset" value="Reset" class="btn">
+        <input type="submit" value="Submit" class="btn">
+        <button type="button" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  </form>
+</div>
+</body>
+</html>
